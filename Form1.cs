@@ -22,5 +22,11 @@ namespace Tarea2
         private void label1_Click(object sender, EventArgs e) {}
 
         private void LabelName_Click(object sender, EventArgs e){}
+
+        private void LabelDescription_Click(object sender, EventArgs e){}
+
+        private void BtnLogin_Click(object sender, EventArgs e){
+            
+        }
     }
 }

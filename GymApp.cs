@@ -39,26 +39,40 @@ namespace Tarea2
                 person.Salary = Double.Parse(tbSalary.Text);
                 person.Stratum = Int16.Parse(cbStratum.Text);
 
-                bool Masculino = rbM.Checked;
-                bool Femenimo = rbF.Checked;
+                if (rbM.Checked) { person.Gender = "Masculino"; }
+                else if (rbF.Checked) { person.Gender = "Femenino"; }
 
-                if (Masculino)
-                {
-                    person.Gender = "Masculino";
-                }
-                else if (Femenimo)
-                {
-                    person.Gender = "Femenino";
-                }
+                ShowData data = new ShowData();
+                data.lblID.Text = person.Id;
+                data.lblName.Text = person.Name;
+                data.lblSalary.Text = person.Salary.ToString();
+                data.lblStratum.Text = person.Stratum.ToString();
+                data.lblGender.Text = person.Gender.ToString();
+                data.lblValue.Text = person.calculateValueGym(person.Salary, person.Stratum, person.Gender).ToString();
+
+                data.Show();
+                this.Hide();
+
             } catch {
                 MessageBox.Show("Error en el ingreso de los datos","Error");
             }
-            
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                person.Id = tbId.Text;
+                person.Name = tbName.Text;
+                person.Salary = Double.Parse(tbSalary.Text);
+                person.Stratum = Int16.Parse(cbStratum.Text);
 
+                if (rbM.Checked) { person.Gender = "Masculino"; }
+                else if (rbF.Checked) { person.Gender = "Femenino"; }
+                this.tbValueMonth.Text = person.calculateValueGym(person.Salary, person.Stratum, person.Gender).ToString();
+            }catch {
+                MessageBox.Show("Error en el ingreso de los datos", "Error");
+            }
         }
 
         private void tbId_TextChanged(object sender, EventArgs e)

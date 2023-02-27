@@ -208,10 +208,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(398, 252);
+            this.ClientSize = new System.Drawing.Size(406, 262);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ShowData";
@@ -235,13 +236,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblStratum;
-        private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label lblValue;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label lblValue;
+        public System.Windows.Forms.Label lblGender;
+        public System.Windows.Forms.Label lblStratum;
+        public System.Windows.Forms.Label lblSalary;
+        public System.Windows.Forms.Label lblName;
+        public System.Windows.Forms.Label lblID;
     }
 }

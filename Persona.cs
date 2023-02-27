@@ -13,16 +13,16 @@ namespace Tarea2
         public double Salary { get; set; }
         public int Stratum { get; set; }
         public string Gender { get; set; }
-        public double TotalValueMonth { get; set; }
+        public double ValueMonth { get; set; }
 
-        public void calculateTotalValueGym(double salary, double discount)
+        public double getTotalValueGym(double salary)
         {
-            if (salary >= 1000000 && salary <= 1999999){ this.TotalValueMonth = 40000 - discount; }
-            else if (salary >= 2000000 && salary <= 5000000){ this.TotalValueMonth = 60000 - discount; }
-            else if (salary > 5000000){ this.TotalValueMonth = 80000 - discount; }
+            if (salary >= 1000000 && salary <= 1999999){ return 40000; }
+            else if (salary >= 2000000 && salary <= 5000000) { return 60000; }
+            else { return 80000; }
         }
 
-        public double calculateTotalDiscount(int stratum, char gender, double totalValueGym)
+        public double calculateDiscount(int stratum, string gender, double totalValueGym)
         {
             double discount = 0;
             if (stratum == 1 || stratum == 2){ discount = totalValueGym * .2; }
@@ -31,6 +31,14 @@ namespace Tarea2
 
             if (gender.Equals("Femenino")) { discount += (totalValueGym * .05); }
             return discount;
+        }
+
+        public double calculateValueGym(double salary, int stratum, string gender)
+        {
+            double totalValueGym = this.getTotalValueGym(salary);
+            double discount = this.calculateDiscount(stratum, gender, totalValueGym);
+            this.ValueMonth = totalValueGym - discount;
+            return this.ValueMonth;          
         }
     }
 }

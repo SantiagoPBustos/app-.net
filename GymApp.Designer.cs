@@ -38,13 +38,13 @@
             this.tbSalary = new System.Windows.Forms.TextBox();
             this.cbStratum = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbF = new System.Windows.Forms.RadioButton();
+            this.rbM = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbValueMonth = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.rbM = new System.Windows.Forms.RadioButton();
-            this.rbF = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,6 +156,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Genero";
             // 
+            // rbF
+            // 
+            this.rbF.AutoSize = true;
+            this.rbF.Location = new System.Drawing.Point(19, 48);
+            this.rbF.Name = "rbF";
+            this.rbF.Size = new System.Drawing.Size(107, 24);
+            this.rbF.TabIndex = 1;
+            this.rbF.Text = "Femenimo";
+            this.rbF.UseVisualStyleBackColor = true;
+            // 
+            // rbM
+            // 
+            this.rbM.AutoSize = true;
+            this.rbM.Checked = true;
+            this.rbM.Location = new System.Drawing.Point(19, 18);
+            this.rbM.Name = "rbM";
+            this.rbM.Size = new System.Drawing.Size(104, 24);
+            this.rbM.TabIndex = 0;
+            this.rbM.TabStop = true;
+            this.rbM.Text = "Masculino";
+            this.rbM.UseVisualStyleBackColor = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -167,14 +189,14 @@
             this.label4.Text = "Valor Mensualidad";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // tbValueMonth
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(244, 386);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 28);
-            this.textBox1.TabIndex = 11;
+            this.tbValueMonth.Enabled = false;
+            this.tbValueMonth.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbValueMonth.Location = new System.Drawing.Point(244, 386);
+            this.tbValueMonth.Name = "tbValueMonth";
+            this.tbValueMonth.Size = new System.Drawing.Size(166, 28);
+            this.tbValueMonth.TabIndex = 11;
             // 
             // btnRegister
             // 
@@ -209,28 +231,6 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // rbM
-            // 
-            this.rbM.AutoSize = true;
-            this.rbM.Checked = true;
-            this.rbM.Location = new System.Drawing.Point(19, 18);
-            this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(104, 24);
-            this.rbM.TabIndex = 0;
-            this.rbM.TabStop = true;
-            this.rbM.Text = "Masculino";
-            this.rbM.UseVisualStyleBackColor = true;
-            // 
-            // rbF
-            // 
-            this.rbF.AutoSize = true;
-            this.rbF.Location = new System.Drawing.Point(19, 48);
-            this.rbF.Name = "rbF";
-            this.rbF.Size = new System.Drawing.Size(107, 24);
-            this.rbF.TabIndex = 1;
-            this.rbF.Text = "Femenimo";
-            this.rbF.UseVisualStyleBackColor = true;
-            // 
             // formGymApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -240,7 +240,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbValueMonth);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbStratum);
@@ -253,6 +253,7 @@
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -280,7 +281,7 @@
         private System.Windows.Forms.ComboBox cbStratum;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbValueMonth;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnExit;

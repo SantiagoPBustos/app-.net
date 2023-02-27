@@ -45,10 +45,10 @@ namespace Tarea2
                 ShowData data = new ShowData();
                 data.lblID.Text = person.Id;
                 data.lblName.Text = person.Name;
-                data.lblSalary.Text = person.Salary.ToString();
+                data.lblSalary.Text = person.Salary.ToString("C");
                 data.lblStratum.Text = person.Stratum.ToString();
                 data.lblGender.Text = person.Gender.ToString();
-                data.lblValue.Text = person.calculateValueGym(person.Salary, person.Stratum, person.Gender).ToString();
+                data.lblValue.Text = person.calculateValueGym(person.Salary, person.Stratum, person.Gender).ToString("C");
 
                 data.Show();
                 this.Hide();
@@ -69,7 +69,7 @@ namespace Tarea2
 
                 if (rbM.Checked) { person.Gender = "Masculino"; }
                 else if (rbF.Checked) { person.Gender = "Femenino"; }
-                this.tbValueMonth.Text = person.calculateValueGym(person.Salary, person.Stratum, person.Gender).ToString();
+                this.tbValueMonth.Text = person.calculateValueGym(person.Salary, person.Stratum, person.Gender).ToString("C");
             }catch {
                 MessageBox.Show("Error en el ingreso de los datos", "Error");
             }
